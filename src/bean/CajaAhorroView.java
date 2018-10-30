@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class CuentaView 
-{
+public class CajaAhorroView {
+	
 	private int numero;
 	private LocalDate fechaApertura;
 	private float saldo;
@@ -13,9 +13,7 @@ public  class CuentaView
 	private List<String> movimientos;
 
 	
-	
-	public CuentaView(int numero, LocalDate fechaApertura, float saldo, 
-			String nombreCliente,List<Movimiento>movs) 
+	public CajaAhorroView(int numero, float saldo, String CBU,List<Movimiento>movs ) 
 	{
 		super();
 		this.numero = numero;
@@ -54,21 +52,15 @@ public  class CuentaView
 	public float getSaldo() {
 		return saldo;
 	}
-
-
-
+	
 	public String getNombreCliente() {
 		return nombreCliente;
 	}
-
-
-
 	public List<String> getMovimientos() {
 		return movimientos;
 	}
 
-	
-	
-	
+
+}
 
 }

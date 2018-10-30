@@ -23,9 +23,17 @@ public abstract class Cliente implements Serializable
 	private int telefono;
 	@Column (name = "domicilio", nullable = false, length = 80)
 	private String domicilio;
+	
+	
+	public Cliente(int telefono, String domicilio) {
+		super();
+		this.telefono = telefono;
+		this.domicilio = domicilio;
+	}
+
 	//private Vector<Cuenta>cuentas;
 	
-	public void setDatos(String domicilio, int telefono) 
+	public void setDatos(Long dni, String domicilio, String nombre, int telefono) 
 	{
 		this.domicilio = domicilio;
 		this.telefono = telefono;
@@ -51,6 +59,11 @@ public abstract class Cliente implements Serializable
 
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
+	}
+
+	public void setNombre(String nombre) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/*

@@ -13,4 +13,17 @@ public class PersonaJuridica extends Cliente {
 	private String CUIT;
 	@Column (name = "RazonSocial", nullable = false, length = 50)
 	private String RazonSocial;
+	
+	
+	public PersonaJuridica(String cuit, String domicilio, String razonSocial, int telefono) {
+		super();
+		CUIT = cuit;
+		RazonSocial = razonSocial;
+	}
+	
+	
+
+	
+	
 }
+

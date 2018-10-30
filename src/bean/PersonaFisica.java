@@ -13,4 +13,13 @@ public class PersonaFisica extends Cliente {
 	private String dni;
 	@Column (name = "NombreApellido", nullable = false, length = 50)
 	private String nombre;
+	
+	
+	public PersonaFisica(String dni, String domicilio, String nombre, int telefono) {
+		super();
+		this.dni = dni;
+		this.nombre = nombre;
+	}
+	
+	
 }
