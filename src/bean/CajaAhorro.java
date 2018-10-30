@@ -1,13 +1,18 @@
 package bean;
 
 import java.time.LocalDate;
+
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="CajasAhorro")
+@DiscriminatorColumn(name= "TipoCuenta", discriminatorType= DiscriminatorType.STRING)
+@DiscriminatorValue("CA")
 public class CajaAhorro extends Cuenta 
 {
+	
 	private float interes;
 	
 

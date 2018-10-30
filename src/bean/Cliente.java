@@ -4,20 +4,26 @@ import java.io.Serializable;
 
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Generated;
+
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Table(name="Clientes")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "Clientes")
 public abstract class Cliente implements Serializable
 {
-	/**
-	 * 
-	 */
+	@Id
+	private long codigo;
+	
 	private static final long serialVersionUID = 1L;
 	@Column (name = "telefono", nullable = false, length = 20)
 	private int telefono;

@@ -1,8 +1,10 @@
-package bean;
+package view;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import bean.Movimiento;
 
 public class CajaAhorroView {
 	
@@ -63,4 +65,3 @@ public class CajaAhorroView {
 
 }
 
-}

@@ -5,7 +5,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 import bean.CajaAhorro;
 import bean.CajaCC;
-import bean.Cliente;
 import bean.Cuenta;
 import bean.Movimiento;
 import bean.PersonaFisica;
@@ -33,7 +32,7 @@ public class HibernateUtil
         {
         	
         	AnnotationConfiguration config = new AnnotationConfiguration();
-            config.addAnnotatedClass(Cliente.class);
+            //config.addAnnotatedClass(Cliente.class);
             config.addAnnotatedClass(PersonaFisica.class);
             config.addAnnotatedClass(PersonaJuridica.class);
             config.addAnnotatedClass(Cuenta.class);
